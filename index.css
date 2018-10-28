@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+	font-family: 'Titillium Web','Lato', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #001a44;
+}
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+#page {
+
+	height: auto;
+	width:100%;
+}
+#logo {
+	font-size: 50px;
+	font-weight: 800;
+	font-family: 'Lato';
+	transition: all 0.4s ease;
+}
+#navBar {
+	padding: 20px 0;
+	background-color: #001a44;
+	width: 100%;
+	color: white;
+	position: fixed;
+	margin: -100px 0;
+	z-index: 1;
+	transition: all 0.4s ease;
+}
+#navBarContainer {
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0 auto;
+	width: 1200px;
+}
+#smallNavContainer {
+	float: right;
+	font-size: 15px;
+	font-weight: 600;
+	vertical-align: middle;
+	padding-top: 3px;
+}
+.navElement {
+	position: relative;
+	list-style-type: none;
+	display: inline;
+}
+.listElement {
+	padding-left: 18px;
+	letter-spacing: 2px;
+	font-weight: 900;
+}
+a:link, a:visited {
+	color: white;
+	text-decoration: none;
+}
+.contentWrap {
+	width: 1200px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	display:block;
+	position: relative;
+}
+#contentWrap {
+	margin-top: 100px;
+}
+#sectionOne {
+	height: 600px;
+	width: 1200px;
+	background-color: transparent;
+	text-align: center;
+}
+h1 {
+	font-size: 35px;
+	font-weight: 200;
+	color: rgb(0,193,206);
+	margin: 0 auto;
+	margin-top:-600px;
+	z-index: 1;
+}
+#sectionTwo {
+	background-color: #001a44;
+	height: 300px;
+	width:100%;
+}

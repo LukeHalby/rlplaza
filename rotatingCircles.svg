@@ -1,0 +1,97 @@
+<!--Scalable Vector Graphic-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200px" height="600px" viewBox="0 0 1200px 600px">
+	<style type="text/css">
+		@keyframes clockwise {
+			0% {transform: rotate(0deg)}
+			100% {transform: rotate(360deg)}
+		}
+		@keyframes anticlockwise{
+			0% {transform: rotate(360deg)}
+			100% {transform: rotate(0deg)}
+		}
+		.clockwise {
+			transform-origin: 50% 50%;
+		}
+		.anticlockwise {
+			transform-origin: 50% 50%;
+		}
+	</style>
+	<defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(0,149,224);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(0,236,188);stop-opacity:1" />
+    </linearGradient>
+	<linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(0,149,224);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(0,193,206);stop-opacity:1" />
+    </linearGradient>
+	<linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(0,193,206);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(0,236,188);stop-opacity:1" />
+    </linearGradient>
+	<linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="30%" style="stop-color:#001a44;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#fff;stop-opacity:1" />
+    </linearGradient>
+	<linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="40%" style="stop-color:#fff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#001a44;stop-opacity:1" />
+    </linearGradient>
+	<linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#001a44;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:rgb(0,149,224);stop-opacity:1" />
+		<stop offset="80%" style="stop-color:rgb(0,149,224);stop-opacity:1" />
+		<stop offset="100%" style="stop-color:#001a44;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+	<rect height="100%" width="100%" fill="#001a44" />
+	<rect x="540" y="285" width="120" height="8" rx="4" ry="4" fill="url(#grad1)"/>
+	<rect x="540" y="315" width="120" height="8" rx="4" ry="4" fill="url(#grad1)"/>
+	<g transform="rotate(45 30 4)">
+	<rect x="612.5" y="-140" width="60" height="8" rx="4" ry="4" fill="url(#grad2)"/>
+	</g>
+	<g transform="rotate(45 30 4)">
+	<rect x="617.7" y="-241.9" width="60" height="8" rx="4" ry="4" fill="url(#grad3)" />
+	</g>
+	<g class="clockwise" style="animation: clockwise 50s linear infinite">
+	<circle cx="600" cy="300" r="103" stroke-width="15" stroke="white" fill-opacity="0" 
+			stroke-dasharray="100,12,53,52,52,52,4,4,4,4,149,52,36,4,4,4,4" />
+	</g>
+	
+	<g class="anticlockwise" style="animation: anticlockwise 50s linear infinite">
+	<circle cx="600" cy="300" r="120" stroke-width="10" stroke="white" stroke-opacity="0.7" fill-opacity="0"
+			stroke-dasharray="80.5,14,81,79,9,7,161,11,21,39,21,109,81,14"/>
+	<circle cx="600" cy="300" r="120" stroke-width="9" stroke="#4d5f7c" fill-opacity="0"
+			stroke-dasharray="80,15,80,80,8,8,160,12,20,40,20,110"/>
+	</g>
+		
+	<g class="clockwise" style="animation: clockwise 60s linear infinite">
+	<circle cx="600" cy="300" r="142" stroke-width="24" stroke="white" stroke-opacity="0.7" fill-opacity="0"
+			stroke-dasharray="50.5,199,49,5,7,9,161,5,21,5,11,5,6,9,11,49,41,49,101,49"/>
+	<circle cx="600" cy="300" r="142" stroke-width="23" stroke="#4d5f7c" fill-opacity="0"
+			stroke-dasharray="50,200,48,6,6,10,160,6,20,6,10,6,5,10,10,50,40,50,100"/>
+	</g>
+	<g>
+	<circle cx="600" cy="300" r="161" stroke-width="4" stroke="url(#grad4)" fill-opacity="0"
+			stroke-dasharray="0,44" stroke-linecap="round"/>
+	</g>
+
+	<g class="anticlockwise" style="animation: anticlockwise 70s linear infinite">
+	<circle cx="600" cy="300" r="184" stroke-width="6" stroke="white" fill-opacity="0"
+			stroke-dasharray="30,50,90,70,30,90,20,160,10,10,5,5,5,120,5,40,170,180"/>
+	</g>
+	
+	<g class="clockwise" style="animation: clockwise 80s linear infinite">
+	<circle cx="600" cy="300" r="199" stroke-width="11" stroke="white" stroke-opacity="0.7" fill-opacity="0" 
+			stroke-dashoffset="-49.5"
+			stroke-dasharray="181,59,81,7,71,39,9,49,181,39,31,7,121,79,141,59,41,199"/>
+	<circle cx="600" cy="300" r="199" stroke-width="10" stroke="#001a44" fill-opacity="0" 
+			stroke-dashoffset="-50"
+			stroke-dasharray="180,60,80,8,70,40,8,50,180,40,30,8,120,80,140,60,40,200"/>
+	<circle cx="600" cy="300" r="206" stroke-width="14" stroke="white" fill-opacity="0" 
+			stroke-dashoffset="-49.5"
+			stroke-dasharray="191,57.5,87,4,76.5,38,12,48,190,37,36,3.5,129,77.5,150.5,57,46,200"/>
+	</g>
+	<path d="M0 590 H 380 L 420 560 H 780 L 820 590 H 1200 " fill="transparent" stroke="url(#grad6)" stroke-width="2"/>
+	
+</svg>
