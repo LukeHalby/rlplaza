@@ -93,5 +93,9 @@
 			stroke-dasharray="191,57.5,87,4,76.5,38,12,48,190,37,36,3.5,129,77.5,150.5,57,46,200"/>
 	</g>
 	<path d="M0 590 H 380 L 420 560 H 780 L 820 590 H 1200 " fill="transparent" stroke="url(#grad6)" stroke-width="2"/>
+    <path d="M381.7 245.6 L 340 235 H 81" fill="transparent" stroke="white" stroke-width="1"/>
+    <path d="M381.7 354.4 L 340 365 H 5" fill="transparent" stroke="white" stroke-width="1"/>
+    <path d="M795.6 188.9 L 890 135 H 1020" fill="transparent" stroke="white" stroke-width="1"/>
+    <path d="M795.6 411.1 L 890 465 H 1121" fill="transparent" stroke="white" stroke-width="1"/>
 	
 </svg>

@@ -33,6 +33,78 @@ $(document).ready(function() {
 		"background-size" : "contain",
 		"background-position" : "0px 50px"
 	});
+
+});
+$(window).load(function(){
+    var block = false;
+    $('#colourHeaderOne').mouseenter(function(){
+        if(!block) {
+            block = true;
+            $('#headerAngleOne').width(200);
+            $(function(){
+                block = false;
+                console.log('block false');
+            });
+        }
+    });
+    $('#colourHeaderOne').mouseleave(function(){
+        console.log('true');
+        if(!block) {
+            block = true;
+            console.log('true2');
+            if ($('#headerAngleOne').width() > 200) {
+                $('#headerAngleOne').one('transitionend', function(){
+                    $('#headerAngleOne').width(1100);
+                    $(function(){
+                        block = false;
+                        console.log('true3');
+                        console.log(block);
+            });
+                });
+            } else if (block === true) {
+                $('#headerAngleOne').width(1100);
+                $(function(){
+                    block = false;
+                    console.log('true3');
+            });
+            }
+        }
+    });
+    
+    var blockTwo = false;
+    $('#colourHeaderTwo').mouseenter(function(){
+        if(!blockTwo) {
+            blockTwo = true;
+            $('#headerAngleTwo').width(200);
+            $(function(){
+                blockTwo = false;
+                console.log('block false');
+            });
+        }
+    });
+    $('#colourHeaderTwo').mouseleave(function(){
+        console.log('true');
+        if(!blockTwo) {
+            blockTwo = true;
+            console.log('true2');
+            if ($('#headerAngleTwo').width() > 200) {
+                $('#headerAngleTwo').one('transitionend', function(){
+                    $('#headerAngleTwo').width(1100);
+                    $(function(){
+                        blockTwo = false;
+                        console.log('true3');
+                        console.log(block);
+            });
+                });
+            } else if (blockTwo === true) {
+                $('#headerAngleTwo').width(1100);
+                $(function(){
+                    blockTwo = false;
+                    console.log('true3');
+            });
+            }
+        }
+    });
 });
 $(function(){
 	$(window).scroll(function(){
@@ -55,4 +127,6 @@ $(function(){
 		}
 	})
 	.scroll();
+    
+
 });
