@@ -180,8 +180,6 @@ smallWidth {
 	background-color: #001a44;
 	position:relative;
 	top: -3px;
-	left: 30px;
-	box-shadow: -25px 12px 0 #001a44, -15px -12px 0 #001a44;
 	transition: all 0.3s ease;
 }
 .headerIconBarsPin {
@@ -342,6 +340,157 @@ smallWidth {
 .Quality:hover + .dropdownContentsQuality, .dropdownContentsQuality:hover {
     display: block;
 }
+.dropdownContentsAttributes {
+    min-width: 160px;
+    display: none;
+    position:absolute;
+    left: 320px;
+    background: -moz-linear-gradient(left, #00c5cc 0%, #00d2c7 100%);
+    background: -webkit-linear-gradient(left, #00c5cc 0%, #00d2c7 100%);
+    background: linear-gradient(to right, #00c5cc 0%, #00d2c7 100%);
+}
+.dropdownContentsAttributes button {
+    font-size: 15px;
+    font-weight: 100px;
+    padding: 5px 10px;
+    width: 160px;
+    color: #001a44;
+    border: none;
+    background-color: transparent;
+    display: block;
+    text-align: left;
+}
+#togglePainted input:checked + #sliderPainted {
+    background-color: #001a44;
+}
+#togglePainted input:checked + #sliderPainted:before {
+    transform: translateX(13px);
+}
+#toggleCertified input:checked + #sliderCertified {
+    background-color: #001a44;
+}
+#toggleCertified input:checked + #sliderCertified:before {
+    transform: translateX(13px);
+}
+.Attributes:hover + .dropdownContentsAttributes, .dropdownContentsAttributes:hover {
+    display: block;
+}
+
+.dropdownContentsOrderTwo {
+    min-width: 160px;
+    display: none;
+    position:absolute;
+    background: -moz-linear-gradient(left, #00add6 0%, #00bbd1 100%);
+    background: -webkit-linear-gradient(left, #00add6 0%, #00bbd1 100%);
+    background: linear-gradient(to right, #00add6 0%, #00bbd1 100%);
+}
+.dropdownContentsOrderTwo button {
+    font-size: 15px;
+    font-weight: 100px;
+    padding: 5px 10px;
+    color: #001a44;
+    border: none;
+    background-color: transparent;
+    display: block;
+}
+.OrderTwo:hover + .dropdownContentsOrderTwo, .dropdownContentsOrderTwo:hover {
+    display: block;
+}
+.dropdownContentsQualityTwo {
+    min-width: 160px;
+    display: none;
+    position:absolute;
+    left: 160px;
+    background: -moz-linear-gradient(left, #00bbd1 0%, #00c5cc 100%);
+    background: -webkit-linear-gradient(left, #00bbd1 0%, #00c5cc 100%);
+    background: linear-gradient(to right, #00bbd1 0%, #00c5cc 100%);
+}
+.dropdownContentsQualityTwo button {
+    font-size: 15px;
+    font-weight: 100px;
+    padding: 5px 10px;
+    width: 160px;
+    color: #001a44;
+    border: none;
+    background-color: transparent;
+    display: block;
+    text-align: left;
+}
+
+#toggleRareTwo input:checked + #sliderRareTwo {
+    background-color: #001a44;
+}
+#toggleRareTwo input:checked + #sliderRareTwo:before {
+    transform: translateX(13px);
+}
+#toggleVRareTwo input:checked + #sliderVRareTwo {
+    background-color: #001a44;
+}
+#toggleVRareTwo input:checked + #sliderVRareTwo:before {
+    transform: translateX(13px);
+}
+#toggleImportTwo input:checked + #sliderImportTwo {
+    background-color: #001a44;
+}
+#toggleImportTwo input:checked + #sliderImportTwo:before {
+    transform: translateX(13px);
+}
+#toggleExoticTwo input:checked + #sliderExoticTwo {
+    background-color: #001a44;
+}
+#toggleExoticTwo input:checked + #sliderExoticTwo:before {
+    transform: translateX(13px);
+}
+#toggleBMTwo input:checked + #sliderBMTwo {
+    background-color: #001a44;
+}
+#toggleBMTwo input:checked + #sliderBMTwo:before {
+    transform: translateX(13px);
+}
+#toggleLimitedTwo input:checked + #sliderLimitedTwo {
+    background-color: #001a44;
+}
+#toggleLimitedTwo input:checked + #sliderLimitedTwo:before {
+    transform: translateX(13px);
+}
+.QualityTwo:hover + .dropdownContentsQualityTwo, .dropdownContentsQualityTwo:hover {
+    display: block;
+}
+.dropdownContentsAttributesTwo {
+    min-width: 160px;
+    display: none;
+    position:absolute;
+    left: 320px;
+    background: -moz-linear-gradient(left, #00c5cc 0%, #00d2c7 100%);
+    background: -webkit-linear-gradient(left, #00c5cc 0%, #00d2c7 100%);
+    background: linear-gradient(to right, #00c5cc 0%, #00d2c7 100%);
+}
+.dropdownContentsAttributesTwo button {
+    font-size: 15px;
+    font-weight: 100px;
+    padding: 5px 10px;
+    width: 160px;
+    color: #001a44;
+    border: none;
+    background-color: transparent;
+    display: block;
+    text-align: left;
+}
+#togglePaintedTwo input:checked + #sliderPaintedTwo {
+    background-color: #001a44;
+}
+#togglePaintedTwo input:checked + #sliderPaintedTwo:before {
+    transform: translateX(13px);
+}
+#toggleCertifiedTwo input:checked + #sliderCertifiedTwo {
+    background-color: #001a44;
+}
+#toggleCertifiedTwo input:checked + #sliderCertifiedTwo:before {
+    transform: translateX(13px);
+}
+.AttributesTwo:hover + .dropdownContentsAttributesTwo, .dropdownContentsAttributesTwo:hover {
+    display: block;
+}
 button:focus{
 	outline: 0;
 }
@@ -378,9 +527,9 @@ button:focus{
 /*.colourHeader:hover .headerAngle{
 	width: 200px;
 	transition: all 0.4s ease-out;
-}*/
+}
 .colourHeader:hover .headerIconBars {
 	left: 5px;
 	box-shadow:  25px 12px 0 #001a44, 15px -12px 0 #001a44;
 	transition: all 0.3s ease; 
-}
+}*/

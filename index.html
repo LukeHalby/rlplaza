@@ -44,7 +44,8 @@
 					<div class="grayHeader"></div>
 					<div id="colourHeaderOne" class="colourHeader">
 						<div class="headerIconLines">
-							<div id="playerTradeSettings" class="headerIconBars"></div>
+							<div id="playerTradeSettings" class="headerIconBars" 
+                                 style="left: 30px; box-shadow: -25px 12px 0 #001a44, -15px -12px 0 #001a44;"></div>
 						</div>
 						<form>
 							<input type="text" class="tradeSearch" name="playerTradeSearch" placeholder="Search...">
@@ -97,7 +98,21 @@
                                     </label>
                                 </button>
                             </div>
-							<li>ATTRIBUTES</li>
+							<li class="Attributes">ATTRIBUTES</li>
+                            <div class="dropdownContentsAttributes">
+                                <button>Painted
+                                    <label id="togglePainted" class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span id="sliderPainted" class="slider"></span>
+                                    </label>
+                                </button>
+                                <button>Certified
+                                    <label id="toggleCertified" class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span id="sliderCertified" class="slider"></span>
+                                    </label>
+                                </button>
+                            </div>
 						</ul>
 						<div id="headerAngleOne" class="headerAngle" style="width: 1150px;"></div>
 						<button id="frameOne" class="frame">
@@ -113,15 +128,75 @@
 					<div class="grayHeader"></div>
 					<div id="colourHeaderTwo" class="colourHeader">
 						<div class="headerIconLines">
-							<div id="botTradeSettings" class="headerIconBars"></div>
+							<div id="botTradeSettings" class="headerIconBars"
+                                 style="left: 30px; box-shadow: -25px 12px 0 #001a44, -15px -12px 0 #001a44;"></div>
 						</div>
 						<form>
 							<input type="text" class="tradeSearch" name="playerTradeSearch" placeholder="Search...">
 						</form>
 						<ul>
-							<li>ORDER BY</li>
-							<li>QUALITY</li>
-							<li>ATTRIBUTES</li>
+							<li class="OrderTwo">ORDER BY</li>
+                            <div class="dropdownContentsOrderTwo">
+                                <button>Alphabetical</button>
+                                <button>Value - Highest</button>
+                                <button>Value - Lowest</button>
+                                <button>Quality - Highest</button>
+                                <button>Quality - Lowest</button>
+                            </div>
+							<li class="QualityTwo">QUALITY</li>
+                            <div class="dropdownContentsQualityTwo">
+                                <button>Rare
+                                    <label id="toggleRareTwo" class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span id="sliderRareTwo" class="slider"></span>
+                                    </label>
+                                </button>
+                                <button>Very Rare
+                                    <label id="toggleVRareTwo" class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span id="sliderVRareTwo" class="slider"></span>
+                                    </label>
+                                </button>
+                                <button>Import
+                                    <label id="toggleImportTwo" class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span id="sliderImportTwo" class="slider"></span>
+                                    </label>
+                                </button>
+                                <button>Exotic
+                                    <label id="toggleExoticTwo" class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span id="sliderExoticTwo" class="slider"></span>
+                                    </label>
+                                </button>
+                                <button>Black Market
+                                    <label id="toggleBMTwo" class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span id="sliderBMTwo" class="slider"></span>
+                                    </label>
+                                </button>
+                                <button>Limited
+                                    <label id="toggleLimitedTwo" class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span id="sliderLimitedTwo" class="slider"></span>
+                                    </label>
+                                </button>
+                            </div>
+							<li class="AttributesTwo">ATTRIBUTES</li>
+                            <div class="dropdownContentsAttributesTwo">
+                                <button>Painted
+                                    <label id="togglePaintedTwo" class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span id="sliderPaintedTwo" class="slider"></span>
+                                    </label>
+                                </button>
+                                <button>Certified
+                                    <label id="toggleCertifiedTwo" class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span id="sliderCertifiedTwo" class="slider"></span>
+                                    </label>
+                                </button>
+                            </div>
 						</ul>
 						<div id="headerAngleTwo" class="headerAngle" style="width: 1150px;"></div>
 						<button id="frameTwo" class="frame">
