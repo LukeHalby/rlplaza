@@ -17,6 +17,9 @@ $(document).ready(function() {
 		"images/tradeBackgrounds/tradeWindow5.png",
 		"images/tradeBackgrounds/tradeWindow6.png",
 		"images/tradeBackgrounds/tradeWindow7.png",
+        "images/tradeBackgrounds/tradeWindow8.png",
+		"images/tradeBackgrounds/tradeWindow9.png",
+		"images/tradeBackgrounds/tradeWindow10.png",
 	];
 	var size = tradeBackgrounds.length;
 	var playerX = Math.floor(size*Math.random());
