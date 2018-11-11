@@ -546,6 +546,10 @@ button:focus{
     color: white;
     opacity: 0.8;
     font-weight: 500;
+    display: block;
+}
+.footerCol a:nth-child(n+2) {
+    margin-top: 12px;
 }
 .textWrap {
     font-size: 12px;
@@ -553,4 +557,14 @@ button:focus{
     color: white;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+.socialIcons {
+    display: inline-flex !important;
+    margin-right: 8px;
+    height: 23px;
+    width: 23px;
+}
+.socialIcons img{
+    height: 23px;
+    width: 23px;
 }
