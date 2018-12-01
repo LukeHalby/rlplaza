@@ -524,6 +524,28 @@ button:focus{
 .whitePin {
 	filter: brightness(0) invert(1);
 }
+.tradeColWrap {
+	height: 300px;
+	width: 1200px;
+	margin-top: 50px;
+}
+.tradeColInv {
+	height: inherit;
+	width: 600px;
+	display: inline-flex;
+}
+.tradeColBreak {
+	height: inherit;
+	width: 200px;
+	display: inline-flex;
+	background-color: #083d77;
+	opacity: 1;
+}
+.tradeColTrade {
+	height: inherit;
+	width: 400px;
+	display: inline-flex;
+}
 #sectionThree {
 	background-color: #001029;
 	height: 200px;
