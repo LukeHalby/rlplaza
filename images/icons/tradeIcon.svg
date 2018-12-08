@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="130px" height="130px" viewBox="0 0 130px 130px">
+    <style type="text/css">
+        
+    </style>
+    <def>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(0,149,224);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(0,236,188);stop-opacity:1" />
+        </linearGradient>
+	    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(0,149,224);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(0,193,206);stop-opacity:1" />
+        </linearGradient>
+	    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(0,193,206);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(0,236,188);stop-opacity:1" />
+        </linearGradient>
+    </def>
+    
+    <rect x="5" y="50" width="120" height="8" rx="4" ry="4" fill="url(#grad1)"/>
+	<rect x="5" y="80" width="120" height="8" rx="4" ry="4" fill="url(#grad1)"/>
+	<g transform="rotate(45 30 4)">
+	<rect x="67.8" y="71.3" width="60" height="8" rx="4" ry="4" fill="url(#grad2)"/>
+	</g>
+	<g transform="rotate(45 30 4)">
+	<rect x="73.5" y="-29" width="60" height="8" rx="4" ry="4" fill="url(#grad3)" />
+	</g>
+</svg>

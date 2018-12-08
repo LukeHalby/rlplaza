@@ -537,9 +537,40 @@ button:focus{
 .tradeColBreak {
 	height: inherit;
 	width: 200px;
-	display: inline-flex;
+	display: inline-block;
 	background-color: #083d77;
 	opacity: 1;
+    position: relative;
+    top:-230px;
+}
+.tradeValue {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    height:100px;
+    display:block;
+    padding-top: 23px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-weight: bold;
+    color: white;
+}
+.tradeIcon {
+    height: 100px;
+    width: 100px;
+    display:block;
+    position: absolute;
+    top:100px;
+    left:50px;
+}
+.tradeAccept {
+    height: 40px;
+    width: 100px;
+    display:block;
+    position: absolute;
+    border-style: none;
+    top:230px;
+    left: 50px;
 }
 .tradeColTrade {
 	height: inherit;
