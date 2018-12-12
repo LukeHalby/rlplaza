@@ -111,6 +111,20 @@ h2 {
     top: 180px;
     right: 860px;
 }
+#hashAnimation {
+    position: absolute;
+    left: 892px;
+    top: 140px;
+    line-height: 28px;
+    width: 130px;
+}
+.hashLine {
+    color: white;
+    font-size: 28px;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 #sectionTwo {
 	background-color: #001a44;
 	height: 800px;
@@ -565,12 +579,18 @@ button:focus{
 }
 .tradeAccept {
     height: 40px;
-    width: 100px;
+    width: 120px;
     display:block;
     position: absolute;
     border-style: none;
     top:230px;
-    left: 50px;
+    left: 40px;
+    font-size: 22px;
+    letter-spacing: 4px;
+    color: rgb(0,149,224);
+    background-color: #001a44;
+    border-radius: 4px;
+    padding: 0px 12px;
 }
 .tradeColTrade {
 	height: inherit;

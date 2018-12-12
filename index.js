@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   	$('#frameOne').click(function() {
 		$('#headerAngleOne').toggleClass('smallWidth');
 		$('#headerPinOne').toggleClass('whitePin');
@@ -36,7 +36,58 @@ $(document).ready(function() {
 		"background-size" : "contain",
 		"background-position" : "0px 50px"
 	});
-
+    /*
+    setInterval(function(){
+        var randOne = Math.random().toString(36).substr(2, 5);
+        var randTwo = Math.random().toString(36).substr(2, 5);
+        var randThree = Math.random().toString(36).substr(2, 5);
+        $("#hlOne").fadeOut(0, function () {
+            $(this).text(randOne).fadeIn(0);
+        });
+        $("#hlTwo").fadeOut(0, function () {
+            $(this).text(randTwo).fadeIn(0);
+        });
+        $("#hlThree").fadeOut(0, function () {
+            $(this).text(randThree).fadeIn(0);
+        });
+    },160)
+    */
+    
+    var hashStringOne = ["K", "W", "U", "9", "2"]
+    var hashStringTwo = ["N", "A", "9", "Y", "0"]
+    var hashStringThree = ["J", "2", "N", "X", "P"]
+    setInterval(function(){
+        var randLetterOne = Math.floor(Math.random() * 4);
+        do {
+            var randLetterTwo = Math.floor(Math.random() * 4);
+        } while (randLetterTwo === randLetterOne);
+        hashStringOne[randLetterOne] = Math.random().toString(36).substr(2, 1);
+        hashStringOne[randLetterTwo] = Math.random().toString(36).substr(2, 1);
+        $("#hlOne").fadeOut(0, function () {
+            $(this).text(hashStringOne[0] + " " + hashStringOne[1] + " " + hashStringOne[2] + " " + hashStringOne[3] + " " + hashStringOne[4]).fadeIn(0);
+        });
+        
+        var randLetterThree = Math.floor(Math.random() * 4);
+        do {
+            var randLetterFour = Math.floor(Math.random() * 4);
+        } while (randLetterFour === randLetterThree);
+        hashStringTwo[randLetterThree] = Math.random().toString(36).substr(2, 1);
+        hashStringTwo[randLetterFour] = Math.random().toString(36).substr(2, 1);
+        $("#hlTwo").fadeOut(0, function () {
+            $(this).text(hashStringTwo[0] + " " + hashStringTwo[1] + " " + hashStringTwo[2] + " " + hashStringTwo[3] + " " + hashStringTwo[4]).fadeIn(0);
+        });
+        
+        var randLetterFive = Math.floor(Math.random() * 4);
+        do {
+            var randLetterSix = Math.floor(Math.random() * 4);
+        } while (randLetterSix === randLetterFive);
+        hashStringThree[randLetterFive] = Math.random().toString(36).substr(2, 1);
+        hashStringThree[randLetterSix] = Math.random().toString(36).substr(2, 1);
+        $("#hlThree").fadeOut(0, function () {
+            $(this).text(hashStringThree[0] + " " + hashStringThree[1] + " " + hashStringThree[2] + " " + hashStringThree[3] + " " + hashStringThree[4]).fadeIn(0);
+        });
+    },300)
+    
 });
 $(window).load(function(){
     var block = false;
@@ -154,6 +205,7 @@ $(window).load(function(){
             }
         }
     });
+    
 });
 $(function(){
 	$(window).scroll(function(){
