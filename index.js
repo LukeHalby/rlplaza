@@ -36,57 +36,68 @@ $(function() {
 		"background-size" : "contain",
 		"background-position" : "0px 50px"
 	});
-    /*
-    setInterval(function(){
-        var randOne = Math.random().toString(36).substr(2, 5);
-        var randTwo = Math.random().toString(36).substr(2, 5);
-        var randThree = Math.random().toString(36).substr(2, 5);
-        $("#hlOne").fadeOut(0, function () {
-            $(this).text(randOne).fadeIn(0);
-        });
-        $("#hlTwo").fadeOut(0, function () {
-            $(this).text(randTwo).fadeIn(0);
-        });
-        $("#hlThree").fadeOut(0, function () {
-            $(this).text(randThree).fadeIn(0);
-        });
-    },160)
-    */
     
     var hashStringOne = ["K", "W", "U", "9", "2"]
     var hashStringTwo = ["N", "A", "9", "Y", "0"]
     var hashStringThree = ["J", "2", "N", "X", "P"]
     setInterval(function(){
-        var randLetterOne = Math.floor(Math.random() * 4);
+        var randLetterOne = Math.floor(Math.random() * 5);
         do {
-            var randLetterTwo = Math.floor(Math.random() * 4);
+            var randLetterTwo = Math.floor(Math.random() * 5);
         } while (randLetterTwo === randLetterOne);
         hashStringOne[randLetterOne] = Math.random().toString(36).substr(2, 1);
         hashStringOne[randLetterTwo] = Math.random().toString(36).substr(2, 1);
-        $("#hlOne").fadeOut(0, function () {
-            $(this).text(hashStringOne[0] + " " + hashStringOne[1] + " " + hashStringOne[2] + " " + hashStringOne[3] + " " + hashStringOne[4]).fadeIn(0);
-        });
+        $("#r1c1").text(hashStringOne[0]);
+        $("#r1c2").text(hashStringOne[1]);
+        $("#r1c3").text(hashStringOne[2]);
+        $("#r1c4").text(hashStringOne[3]);
+        $("#r1c5").text(hashStringOne[4]);
         
-        var randLetterThree = Math.floor(Math.random() * 4);
+        var randLetterThree = Math.floor(Math.random() * 5);
         do {
-            var randLetterFour = Math.floor(Math.random() * 4);
+            var randLetterFour = Math.floor(Math.random() * 5);
         } while (randLetterFour === randLetterThree);
         hashStringTwo[randLetterThree] = Math.random().toString(36).substr(2, 1);
         hashStringTwo[randLetterFour] = Math.random().toString(36).substr(2, 1);
-        $("#hlTwo").fadeOut(0, function () {
-            $(this).text(hashStringTwo[0] + " " + hashStringTwo[1] + " " + hashStringTwo[2] + " " + hashStringTwo[3] + " " + hashStringTwo[4]).fadeIn(0);
-        });
+        $("#r2c1").text(hashStringTwo[0]);
+        $("#r2c2").text(hashStringTwo[1]);
+        $("#r2c3").text(hashStringTwo[2]);
+        $("#r2c4").text(hashStringTwo[3]);
+        $("#r2c5").text(hashStringTwo[4]);
         
-        var randLetterFive = Math.floor(Math.random() * 4);
+        var randLetterFive = Math.floor(Math.random() * 5);
         do {
-            var randLetterSix = Math.floor(Math.random() * 4);
+            var randLetterSix = Math.floor(Math.random() * 5);
         } while (randLetterSix === randLetterFive);
         hashStringThree[randLetterFive] = Math.random().toString(36).substr(2, 1);
         hashStringThree[randLetterSix] = Math.random().toString(36).substr(2, 1);
-        $("#hlThree").fadeOut(0, function () {
-            $(this).text(hashStringThree[0] + " " + hashStringThree[1] + " " + hashStringThree[2] + " " + hashStringThree[3] + " " + hashStringThree[4]).fadeIn(0);
-        });
-    },300)
+        $("#r3c1").text(hashStringThree[0]);
+        $("#r3c2").text(hashStringThree[1]);
+        $("#r3c3").text(hashStringThree[2]);
+        $("#r3c4").text(hashStringThree[3]);
+        $("#r3c5").text(hashStringThree[4]);
+    },60)
+    
+    $(window).scroll(function(){
+		var st = $(this).scrollTop();
+	
+		if(st === 0) {
+			$('#navBar').css({
+				"padding" : "20px 0"
+			});
+			$('#logo').css({
+				"font-size" : "50px"
+			});
+		} else {
+			$('#navBar').css({
+				"padding" : "0 0"
+			});
+			$('#logo').css({
+				"font-size" : "40px"
+			});
+		}
+	})
+	.scroll();
     
 });
 $(window).load(function(){
@@ -206,28 +217,4 @@ $(window).load(function(){
         }
     });
     
-});
-$(function(){
-	$(window).scroll(function(){
-		var st = $(this).scrollTop();
-	
-		if(st === 0) {
-			$('#navBar').css({
-				"padding" : "20px 0"
-			});
-			$('#logo').css({
-				"font-size" : "50px"
-			});
-		} else {
-			$('#navBar').css({
-				"padding" : "0 0"
-			});
-			$('#logo').css({
-				"font-size" : "40px"
-			});
-		}
-	})
-	.scroll();
-    
-
 });

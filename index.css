@@ -118,12 +118,13 @@ h2 {
     line-height: 28px;
     width: 130px;
 }
-.hashLine {
+.hashChar {
     color: white;
-    font-size: 28px;
+    font-size: 27px;
     text-align: justify;
     text-transform: uppercase;
     font-weight: bold;
+    min-width: 25px;
 }
 #sectionTwo {
 	background-color: #001a44;
@@ -249,12 +250,12 @@ smallWidth {
 }
 .dropdownContentsOrder button {
     font-size: 15px;
-    font-weight: 100px;
     padding: 5px 10px;
     color: #001a44;
     border: none;
     background-color: transparent;
     display: block;
+    cursor: pointer;
 }
 .Order:hover + .dropdownContentsOrder, .dropdownContentsOrder:hover {
     display: block;
@@ -268,9 +269,9 @@ smallWidth {
     background: -webkit-linear-gradient(left, #00bbd1 0%, #00c5cc 100%);
     background: linear-gradient(to right, #00bbd1 0%, #00c5cc 100%);
 }
-.dropdownContentsQuality button {
+.dropdownContentsQuality div {
+    font-family: sans-serif;
     font-size: 15px;
-    font-weight: 100px;
     padding: 5px 10px;
     width: 160px;
     color: #001a44;
@@ -285,6 +286,7 @@ smallWidth {
     width: 28px;
     height: 15px;
     right: 10px;
+    margin-top: 4px;
 }
 .toggle input {
     opacity: 0;
@@ -363,7 +365,8 @@ smallWidth {
     background: -webkit-linear-gradient(left, #00c5cc 0%, #00d2c7 100%);
     background: linear-gradient(to right, #00c5cc 0%, #00d2c7 100%);
 }
-.dropdownContentsAttributes button {
+.dropdownContentsAttributes div {
+    font-family: sans-serif;
     font-size: 15px;
     font-weight: 100px;
     padding: 5px 10px;
@@ -406,6 +409,7 @@ smallWidth {
     border: none;
     background-color: transparent;
     display: block;
+    cursor: pointer;
 }
 .OrderTwo:hover + .dropdownContentsOrderTwo, .dropdownContentsOrderTwo:hover {
     display: block;
@@ -419,7 +423,8 @@ smallWidth {
     background: -webkit-linear-gradient(left, #00bbd1 0%, #00c5cc 100%);
     background: linear-gradient(to right, #00bbd1 0%, #00c5cc 100%);
 }
-.dropdownContentsQualityTwo button {
+.dropdownContentsQualityTwo div {
+    font-family: sans-serif;
     font-size: 15px;
     font-weight: 100px;
     padding: 5px 10px;
@@ -479,7 +484,8 @@ smallWidth {
     background: -webkit-linear-gradient(left, #00c5cc 0%, #00d2c7 100%);
     background: linear-gradient(to right, #00c5cc 0%, #00d2c7 100%);
 }
-.dropdownContentsAttributesTwo button {
+.dropdownContentsAttributesTwo div {
+    font-family: sans-serif;
     font-size: 15px;
     font-weight: 100px;
     padding: 5px 10px;
