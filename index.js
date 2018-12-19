@@ -86,14 +86,16 @@ $(function() {
 				"padding" : "20px 0"
 			});
 			$('#logo').css({
-				"font-size" : "50px"
+				"width" : "90px",
+                "height" : "90px"
 			});
 		} else {
 			$('#navBar').css({
 				"padding" : "0 0"
 			});
 			$('#logo').css({
-				"font-size" : "40px"
+				"width" : "50px",
+                "height" : "50px"
 			});
 		}
 	})
