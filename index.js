@@ -102,7 +102,7 @@ $(function() {
 	.scroll();
     
     $('.tradeItem').click(function(event){
-        if ($('.tradeItem').parent('#playerInvCol').length == 1){
+        if ($(this).parent('#playerInvCol').length == 1){
             $(this).appendTo('#playerTradeCol'); 
         } else {
             $(this).appendTo('#playerInvCol');
