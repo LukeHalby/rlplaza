@@ -559,6 +559,69 @@ button:focus{
 	height: inherit;
 	width: 600px;
 	display: inline-flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.tradeItem {
+    width:90px;
+    height: 90px;
+    margin: 5px;
+    display: inline-grid;
+    background: url(images/items/bodies/breakout.png) no-repeat;
+    background-size: contain;
+}
+.tradeItemHoverWrap {
+    height: 310px;
+    width: 810px;
+    z-index: 10;
+    position: absolute;
+    top: -255px;
+    display: none;
+}
+.tradeItem:hover .tradeItemHoverWrap, .tradeItemHoverWrap:hover {
+    display: block;
+}
+.tradeItemHover {
+    height: 300px;
+    width: inherit;
+    background-color: #001a44;
+    box-shadow: 0px 0px 100px -60px #00C7FF;
+    z-index: 10;
+    border-radius: 4px;
+    position: absolute;
+    vertical-align: top;
+}
+.tradeItemHoverInfoWrap {
+    height: inherit;
+    width: 300px;
+    display: inline-block;
+    color: white;
+    line-height: 20px;
+    vertical-align: top;
+}
+.tradeItemHoverInfo {
+    list-style-type: none;
+    padding-left: 10px;
+    margin: 8px 0px;
+}
+.listTitle {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 34px;
+}
+.listDesc {
+    font-size: 18px;
+    line-height: 22px
+}
+.hoverGraphWrap {
+    height: inherit;
+    width: 510px;
+    display: inline-block
 }
 .tradeColBreak {
 	height: inherit;
