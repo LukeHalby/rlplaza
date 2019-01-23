@@ -673,6 +673,8 @@ button:focus{
 	height: inherit;
 	width: 400px;
 	display: inline-flex;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 #sectionThree {
 	background-color: #001029;

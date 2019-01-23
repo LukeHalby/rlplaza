@@ -101,6 +101,14 @@ $(function() {
 	})
 	.scroll();
     
+    $('.tradeItem').click(function(event){
+        if ($('.tradeItem').parent('#playerInvCol').length == 1){
+            $(this).appendTo('#playerTradeCol'); 
+        } else {
+            $(this).appendTo('#playerInvCol');
+        }
+    });
+    
 });
 $(window).load(function(){
     var block = false;
