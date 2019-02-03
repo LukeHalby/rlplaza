@@ -561,6 +561,7 @@ button:focus{
 	display: inline-flex;
     overflow-x: hidden;
     overflow-y: auto;
+    vertical-align: top;
 }
 .items {
     display: flex;
@@ -630,7 +631,7 @@ button:focus{
 	background-color: #083d77;
 	opacity: 1;
     position: relative;
-    top:-230px;
+    vertical-align: top;
 }
 .tradeValue {
     text-align: center;

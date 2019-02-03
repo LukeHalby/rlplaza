@@ -111,7 +111,10 @@ $(function() {
     
 });
 $(window).load(function(){
+    
     var block = false;
+    
+    
     
     $('#frameOne').on('click', function(){
         block = !block;
@@ -119,7 +122,9 @@ $(window).load(function(){
     });
     
     $('#colourHeaderOne').mouseenter(function(){
-        if(!block) {
+        console.log('mouse enter');
+        block = false;
+        if(block == false) {
             block = true;
             $('#headerAngleOne').width(200);
             $('#headerAngleOne').css({"transition-delay":"0s"});
@@ -130,16 +135,16 @@ $(window).load(function(){
             });
             $(function(){
                 block = false;
-                console.log('block false');
+                console.log('block set to short width');
             });
         }
     });
     
     $('#colourHeaderOne').mouseleave(function(){
-        console.log('true');
+        console.log('mouse leave');
         if(!block) {
             block = true;
-            console.log('true2');
+            console.log('block = true');
             
             if ($('#headerAngleOne').width() > 200) {
                 $('#headerAngleOne').one('transitionend', function(){
@@ -147,14 +152,14 @@ $(window).load(function(){
                     $('#playerTradeSettings').css({
                     "left" : "30px",
                     "box-shadow" : "-25px 12px 0 #001a44, -15px -12px 0 #001a44"
-                });
+                    });
                     $(function(){
                         block = false;
-                        console.log('true3');
+                        console.log('no transition delay success');
                         console.log(block);
-            });
+                    });
                 });
-            } else if (block === true) {
+            } else if ($('#headerAngleOne').width() === 200) {
                 $('#headerAngleOne').css({"transition-delay":"0.5s"});
                 $('#headerAngleOne').width(1100);
                 $('#playerTradeSettings').css({
@@ -164,7 +169,7 @@ $(window).load(function(){
                 });
                 $(function(){
                     block = false;
-                    console.log('true3');
+                    console.log('transition delay successful');
             });
             }
         }
@@ -178,6 +183,7 @@ $(window).load(function(){
     });
     
     $('#colourHeaderTwo').mouseenter(function(){
+        blockTwo = false;
         if(!blockTwo) {
             blockTwo = true;
             $('#headerAngleTwo').width(200);
