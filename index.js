@@ -136,6 +136,7 @@ $(window).load(function(){
             $(function(){
                 block = false;
                 console.log('block set to short width');
+                console.log(block);
             });
         }
     });
@@ -144,8 +145,8 @@ $(window).load(function(){
         console.log('mouse leave');
         if(!block) {
             block = true;
-            console.log('block = true');
-            
+            console.log('block = ' + block);
+            console.log($('#headerAngleOne').width());
             if ($('#headerAngleOne').width() > 200) {
                 $('#headerAngleOne').one('transitionend', function(){
                     $('#headerAngleOne').width(1100);
@@ -159,7 +160,8 @@ $(window).load(function(){
                         console.log(block);
                     });
                 });
-            } else if ($('#headerAngleOne').width() === 200) {
+            } else if ($('#headerAngleOne').width() <= 201) {
+                
                 $('#headerAngleOne').css({"transition-delay":"0.5s"});
                 $('#headerAngleOne').width(1100);
                 $('#playerTradeSettings').css({
