@@ -113,17 +113,22 @@ $(function() {
 $(window).load(function(){
     
     var block = false;
-    
+    var pin = false;
     
     
     $('#frameOne').on('click', function(){
         block = !block;
+        pin = !pin;
         console.log(block);
     });
     
     $('#colourHeaderOne').mouseenter(function(){
         console.log('mouse enter');
-        block = false;
+        
+        if (!pin){
+           block = false; 
+        }
+        
         if(block == false) {
             block = true;
             $('#headerAngleOne').width(200);
@@ -160,7 +165,8 @@ $(window).load(function(){
                         console.log(block);
                     });
                 });
-            } else if ($('#headerAngleOne').width() <= 201) {
+            } 
+            if ($('#headerAngleOne').width() <= 201) {
                 
                 $('#headerAngleOne').css({"transition-delay":"0.5s"});
                 $('#headerAngleOne').width(1100);
@@ -178,14 +184,20 @@ $(window).load(function(){
     });
     
     var blockTwo = false;
+    var pinTwo = false;
     
     $('#frameTwo').on('click', function(){
         blockTwo = !blockTwo;
+        pinTwo = !pinTwo;
         console.log(block);
     });
     
     $('#colourHeaderTwo').mouseenter(function(){
-        blockTwo = false;
+        
+        if (!pinTwo){
+            blockTwo = false;
+        }
+        
         if(!blockTwo) {
             blockTwo = true;
             $('#headerAngleTwo').width(200);
@@ -219,7 +231,8 @@ $(window).load(function(){
                         console.log(block);
             });
                 });
-            } else if (blockTwo === true) {
+            } 
+            if ($('#headerAngleTwo').width() <= 201) {
                 $('#headerAngleTwo').css({"transition-delay":"0.5s"});
                 $('#headerAngleTwo').width(1100);
                 $('#botTradeSettings').css({
