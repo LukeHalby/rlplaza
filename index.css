@@ -33,7 +33,7 @@ html {
     height: 100%;
 }
 #navBar {
-	padding: 20px 0;
+	padding: 20px 0px;
 	background-color: #001a44;
 	width: 100%;
 	color: white;
@@ -53,21 +53,56 @@ html {
 	font-size: 15px;
 	font-weight: 600;
 	vertical-align: middle;
-	padding-top: 3px;
+    margin: 0px;
+    height: 56px;
 }
 .navElement {
 	position: relative;
 	list-style-type: none;
 	display: inline;
+    height: 56px;
+    line-height: 56px;
 }
 .listElement {
-	padding-left: 18px;
+	padding: 15px 9px;
 	letter-spacing: 2px;
 	font-weight: 900;
+}
+.listElement::before {
+    content: "";
+    bottom: -15px;
+    left: 0px;
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    background: #00c1ce;
+    transition: width 0.5s ease;
+}
+.listElement:hover::before {
+    width: 100%;
 }
 a:link, a:visited {
 	color: white;
 	text-decoration: none;
+}
+.activeAccount {
+    padding: 15px 15px;
+    font-weight: bold;
+    color: #00c1ce;
+    font-size: 25px;
+}
+.activeAccount::before {
+    content: "";
+    bottom: -15px;
+    left: 0px;
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    background: #00c1ce;
+    transition: width 0.5s ease;
+}
+.activeAccount:hover::before {
+    width: 100%;
 }
 .contentWrap {
 	width: 1200px;
