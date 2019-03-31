@@ -112,14 +112,14 @@ $(function() {
 });
 $(window).load(function(){
     
-    $('.navElementUser').hover(function() {
+    $('.navElementUser, .userDropdown').hover(function() {
         $('.hoverUnderline').css({"transition-delay" : "0s"});
         $('.userDropdown').css({"transition-delay" : "0.6s"});
         
         $('.hoverUnderline').css({"width" : "100%"});
         $('.userDropdown').css({"max-height" : "500px"});
     }, function(){
-        if (($('.hoverUnderline').width() == 150) && ($('.userDropdown').height() == 165)) {
+        if (($('.hoverUnderline').width() == 150) && ($('.userDropdown').height() >= 160)) {
             $('.hoverUnderline').css({"transition-delay" : "1s"});
             $('.userDropdown').css({"transition-delay" : "0s"});
             

@@ -122,7 +122,6 @@ a:link, a:visited {
     max-height: 0px;
     overflow: hidden;
     transition: max-height 1s ease-in-out;
-    transition-delay: 0.6s;
 }
 .userDropdownElement {
     font-weight: bold;
