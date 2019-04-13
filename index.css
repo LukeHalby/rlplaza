@@ -216,7 +216,7 @@ h2 {
 		
 }
 .tradeColour{
-	background-color: rgba(0, 26, 68, 0.9);
+	background-color: rgba(0, 26, 68, 0.8);
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -626,7 +626,7 @@ button:focus{
 }
 .tradeColInv {
 	height: inherit;
-	width: 600px;
+	width: 617px;
 	display: inline-flex;
     overflow-x: hidden;
     overflow-y: auto;
@@ -636,19 +636,26 @@ button:focus{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    align-items:flex-start;
+    align-content:flex-start;
 }
 .tradeItem {
     width:90px;
     height: 90px;
     margin: 5px;
     display: inline-grid;
-    background: url(images/items/bodies/breakout.png) no-repeat;
-    background-size: contain;
+    background-color: rgba(0, 26, 68, 0.65);
+    flex-wrap: wrap;
+    position: relative;
+}
+.tradeItem img {
+    max-height: 90px;
+    max-width: 90px;
 }
 .tradeItemHoverWrap {
     height: 310px;
     width: 810px;
-    z-index: 10;
+    z-index: 100;
     position: absolute;
     top: -255px;
     display: none;
@@ -695,7 +702,7 @@ button:focus{
 }
 .tradeColBreak {
 	height: inherit;
-	width: 200px;
+	width: 166px;
 	display: inline-block;
 	background-color: #083d77;
 	opacity: 1;
@@ -720,7 +727,7 @@ button:focus{
     display:block;
     position: absolute;
     top:100px;
-    left:50px;
+    left:33px;
 }
 .tradeAccept {
     height: 40px;
@@ -729,7 +736,7 @@ button:focus{
     position: absolute;
     border-style: none;
     top:230px;
-    left: 40px;
+    left: 23px;
     font-size: 22px;
     letter-spacing: 4px;
     color: rgb(0,149,224);
@@ -741,7 +748,7 @@ button:focus{
 }
 .tradeColTrade {
 	height: inherit;
-	width: 400px;
+	width: 417px;
 	display: inline-flex;
     overflow-x: hidden;
     overflow-y: auto;
