@@ -653,7 +653,7 @@ button:focus{
     max-width: 90px;
 }
 .tradeItemHoverWrap {
-    height: 310px;
+    height: 315px;
     width: 810px;
     z-index: 100;
     position: absolute;
