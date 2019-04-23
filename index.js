@@ -141,10 +141,11 @@ $(window).load(function(){
                                                 '<li class="listDesc" id="itemType">Body</li>' +
                                                 '<li class="listDesc" id="itemPaint">No paint</li>' +
                                                 '<li class="listDesc" id="itemCert">Not certified</li>' +
+                                                '<li class="listTooltip">RIGHT CLICK TO INTERACT</li>' +
                                             '</ul>' +
                                         '</div><div class="hoverGraphWrap">' +
                                             '<svg width="510" height="300" xmlns="http://www.w3.org/2000/svg">' +
-                                                '<defs><linearGradient y2="0" x2="1" y1="0" x1="0" id="svg_28"><stop offset="0" stop-opacity="0.5" stop-color="#ffffff"/><stop offset="1" stop-opacity="0.097656" stop-color="#ffffff"/></linearGradient></defs>' +
+                                                '<defs><linearGradient y2="0" x2="1" y1="0" x1="0" id="svg_28"><stop offset="0" stop-opacity="0.5" stop-color="#ffffff"/><stop offset="1" stop-opacity="0.097656" stop-color="#ffffff"/></linearGradient><linearGradient id="lineGrad" y2="0" x2="1" y1="0" x1="0"><stop offset="0" stop-opacity="1" stop-color="#0095e0"/><stop offset="1" stop-opacity="1" stop-color="#00ecbc"/></linearGradient></defs>' +
                                                 '<g><title>background</title><rect fill="#001a44" id="canvas_background" height="302" width="512" y="-1" x="-1"/><g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid"><rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/></g></g>' +
                                                 '<g><title>Layer 1</title><line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y2="260.442478" x2="45.752212" y1="20" x1="45.752212" stroke="#ffffff" fill="none"/><line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="260.442478" x2="486.752212" y1="260" x1="45.252212" stroke="#ffffff" fill="none"/><use href="#gridGradLines" y="20" x="45.752212" stroke-width="0"></use><use href="#gridGradLines" y="68" x="45.752212" stroke-width="0"></use><use href="#gridGradLines" y="116" x="45.752212" stroke-width="0"></use><use href="#gridGradLines" y="164" x="45.752212" stroke-width="0"></use><use href="#gridGradLines" y="212" x="45.752212" stroke-width="0"></use><rect id="svg_22" height="240" width="1" y="20.442478" x="119.052212" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#6e7d95"/><rect id="svg_23" height="240" width="1" y="20.442478" x="192.412212" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#5c6d87"/><rect id="svg_24" height="240" width="1" y="20.442478" x="265.752212" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#4c5e7c"/><rect id="svg_25" height="240" width="1" y="20.442478" x="339.082212" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#3b4f6f"/><rect id="svg_26" height="240" width="1" y="20.442478" x="412.412212" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#293f62"/><rect id="svg_27" height="240" width="1" y="20" x="485.752212" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#193056"/>' +
                                                     '<text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" id="svg_30" y="28.442478" x="15.557522" stroke-width="0" stroke="#ffffff" fill="#ffffff">$2.50</text>' +
@@ -160,6 +161,19 @@ $(window).load(function(){
                                                     '<text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_40" y="271.426853" x="339.082212" stroke-width="0" stroke="#ffffff" fill="#ffffff">Fri</text>' +
                                                     '<text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_41" y="271.426853" x="412.412212" stroke-width="0" stroke="#ffffff" fill="#ffffff">Sat</text>' +
                                                     '<text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_42" y="271.442478" x="469.345962" stroke-width="0" stroke="#ffffff" fill="#ffffff">Sun</text></g>' +
+                                                    '<g fill="url(#lineGrad)" stroke="url(#lineGrad)"><ellipse ry="8" rx="8" id="svg_4" cy="116.5" cx="119.5" stroke-opacity="null" stroke-width="0"/>' +
+                                                    '<ellipse ry="8" rx="8" id="svg_6" cy="116.5" cx="192.5" stroke-opacity="null" stroke-width="0"/>' +
+                                                    '<ellipse ry="8" rx="8" id="svg_7" cy="116.5" cx="266.3" stroke-opacity="null" stroke-width="0"/>' +
+                                                    '<ellipse ry="8" rx="8" id="svg_8" cy="116.5" cx="339.7" stroke-opacity="null" stroke-width="0"/>' +
+                                                    '<ellipse ry="8" rx="8" id="svg_9" cy="116.5" cx="45.5" stroke-opacity="null" stroke-width="0"/>' +
+                                                    '<ellipse ry="8" rx="8" id="svg_10" cy="116.5" cx="412.3" stroke-opacity="null" stroke-width="0"/>' +
+                                                    '<ellipse ry="8" rx="8" id="svg_11" cy="116.5" cx="486.391815" stroke-opacity="null" stroke-width="0"/>' +
+                                                    '<line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_12" y2="116.5" x2="119.33" y1="116.5" x1="45.5" stroke-opacity="null" fill="none"/>' +
+                                                    '<line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_13" y2="116.5" x2="192.66" y1="116.5" x1="119.33" stroke-opacity="null" fill="none"/>' +
+                                                    '<line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_14" y2="116.5" x2="266.00" y1="116.5" x1="192.66" stroke-opacity="null" fill="none"/>' +
+                                                    '<line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="116.5" x2="339.33" y1="116.5" x1="266.00" stroke-opacity="null" fill="none"/>' +
+                                                    '<line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_21" y2="116.5" x2="412.66" y1="116.5" x1="339.33" stroke-opacity="null" fill="none"/>' +
+                                                    '<line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_29" y2="116.5" x2="486.00" y1="116.5" x1="412.66" stroke-opacity="null" fill="none"/></g>' +
                                         '</svg>' +
                                         '</div>' +
                                     '</div>';
@@ -181,14 +195,15 @@ $(window).load(function(){
             "display" : "block"
         });
     }, function () {
-        if (hoverPinStatus) {
+        /*if (hoverPinStatus) {
             if (!$('.tradeItemHoverWrap').mouseIsOver()) {
                 $('.tradeItemHoverWrap').remove();
+                hoverPinStatus = false;
             }
-            hoverPinStatus = false;
+            
         } else {
             $('.tradeItemHoverWrap').remove();
-        }
+        }*/
     });
     setInterval(function(){
         $('.tradeItemHoverWrap').hover(function(){

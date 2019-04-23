@@ -693,7 +693,15 @@ button:focus{
 }
 .listDesc {
     font-size: 18px;
-    line-height: 22px
+    line-height: 22px;
+}
+.listTooltip {
+    color: rgb(0,193,206);
+    font-size: 15px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    bottom: 10px;
+    position: absolute;
 }
 .hoverGraphWrap {
     height: inherit;
