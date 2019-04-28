@@ -5,6 +5,13 @@
    <stop stop-color="#ffffff" stop-opacity="0.5" offset="0"/>
    <stop stop-color="#ffffff" stop-opacity="0.097656" offset="1"/>
   </linearGradient>
+     <linearGradient id="lineGrad" y2="0" x2="1" y1="0" x1="0"><stop offset="0" stop-opacity="1" stop-color="#0095e0"/><stop offset="1" stop-opacity="1" stop-color="#00ecbc"/></linearGradient>
+     <style>
+        path {
+            fill: url(#lineGrad) !important;
+        }
+     </style>
+     <clipPath id="dotsClip"><path d="M45.25 20 H486.75 V260 H45.25 Z"/></clipPath>
  </defs>
  <g>
   <title>background</title>
@@ -41,18 +48,20 @@
   <text fill="#ffffff" stroke="#ffffff" stroke-width="0" x="339.082212" y="271.426853" id="svg_40" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">Fri</text>
   <text fill="#ffffff" stroke="#ffffff" stroke-width="0" x="412.412212" y="271.426853" id="svg_41" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">Sat</text>
   <text fill="#ffffff" stroke="#ffffff" stroke-width="0" x="469.345962" y="271.442478" id="svg_42" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">Sun</text>
-  <ellipse ry="8" rx="8" id="svg_4" cy="116.5" cx="119.5" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#00bf5f"/>
-  <ellipse ry="8" rx="8" id="svg_6" cy="116.5" cx="192.5" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#00bf5f"/>
-  <ellipse ry="8" rx="8" id="svg_7" cy="116.5" cx="266.3" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#00bf5f"/>
-  <ellipse ry="8" rx="8" id="svg_8" cy="116.5" cx="339.7" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#00bf5f"/>
-  <ellipse ry="8" rx="8" id="svg_9" cy="116.5" cx="45.5" stroke-width="0" stroke="#ffffff" fill="#00bf5f"/>
-  <ellipse ry="8" rx="8" id="svg_10" cy="116.5" cx="412.3" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#00bf5f"/>
-  <ellipse ry="8" rx="8" id="svg_11" cy="116.5" cx="486.391815" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#00bf5f"/>
-  <line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_12" y2="116.5" x2="119.666112" y1="116.5" x1="45.5" stroke-opacity="null" stroke="#ffffff" fill="none"/>
-  <line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_13" y2="116.5" x2="193.071455" y1="116.5" x1="119.403681" stroke-opacity="null" stroke="#ffffff" fill="none"/>
-  <line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_14" y2="116.5" x2="266.565685" y1="116.5" x1="192.565684" stroke-opacity="null" stroke="#ffffff" fill="none"/>
-  <line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="116.5" x2="340.107636" y1="116.5" x1="266.43986" stroke-opacity="null" stroke="#ffffff" fill="none"/>
-  <line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_21" y2="116.521976" x2="412.555563" y1="116.521976" x1="339.884467" stroke-opacity="null" stroke="#ffffff" fill="none"/>
-  <line stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_29" y2="116.521976" x2="486.641917" y1="116.521976" x1="412.475806" stroke-opacity="null" stroke="#ffffff" fill="none"/>
+  
+     <path clip-path="url(#dotsClip)" d="M40 115 A1 0.85, 0, 0 1, 52 115 
+              L113.33 115 A1 0.8, 0, 0 1, 125.33 115
+              L186.66 115 A1 0.8, 0, 0 1, 198.66 115
+              L260 115 A1 0.8, 0, 0 1, 272 115
+              L333.33 115 A1 0.8, 0, 0 1, 345.33 115
+              L406.66 115 A1 0.8, 0, 0 1, 418.66 115
+              L480 115 A1 0.8, 0, 0 1, 492 115 
+              L492 118 A1 0.8, 0, 0 1, 480 118 
+              L418.66 118 A1 0.8, 0, 0 1, 406.66 118
+              L345.33 118 A1 0.8, 0, 0 1, 333.33 118
+              L272 118 A1 0.8, 0, 0 1, 260 118
+              L198.66 118 A1 0.8, 0, 0 1, 186.66 118
+              L125.33 118 A1 0.8, 0, 0 1, 113.33 118
+              L52 118 A1 0.85, 0, 0 1, 40 118.5 L40 115"/>
  </g>
 </svg>

@@ -805,3 +805,6 @@ button:focus{
     height: 23px;
     width: 23px;
 }
+#dots, #line {
+    fill: url(#lineGrad) !important;
+}
