@@ -101,9 +101,18 @@ $(function() {
 	})
 	.scroll();
     
-    var n = $('.tradeItem').length;
+    /*var n = $('.tradeItem').length;
     for (i=1; i<=n; i++) {
         $('#playerInvCol .tradeItem:nth-child(' + i + ')').attr('no', i);
+    }*/
+    
+    var quality = [['rare', 'Rare'], ['vrare', 'Very Rare'], ['import', 'Import'], ['exotic', 'Exotic'], ['bm', 'Black Market'], ['limited', 'Limited']];
+    
+    for (i=1; i<=30; i++) {
+        var rand = Math.floor(Math.random() * 6);
+        var itemObject = '<div class="tradeItem" data-quality="' + rand + '"><img src="images/items/bodies/breakout2.png"><svg width="90" height="90" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="url(#' + quality[rand][0] + ')"/></svg><span class="tradeItemPrice">0.00</span></div>';
+        $('#playerInvCol').append(itemObject);
+        
     }
     
 });
@@ -132,12 +141,39 @@ $(window).load(function(){
         }
     });
     
-    var itemInfoTemplate = '<div class="tradeItemHoverWrap">' +
+    $('#qualityHighPlayer').on('click', function () {
+        $("#playerInvCol .tradeItem").sort(qualityHighSort).appendTo('#playerInvCol');
+        function qualityHighSort(a, b) {
+            return ($(b).data('quality')) > ($(a).data('quality')) ? 1 : -1;
+        }
+    });
+    $('#qualityLowPlayer').on('click', function () {
+        $("#playerInvCol .tradeItem").sort(qualityLowSort).appendTo('#playerInvCol');
+        function qualityLowSort(a, b) {
+            return ($(b).data('quality')) < ($(a).data('quality')) ? 1 : -1;
+        }
+    });
+    
+    jQuery.fn.mouseIsOver = function() {
+        return $(this).parent().find($(this).selector + ":hover").length > 0;
+    }
+    
+    var quality = [['rare', 'Rare'], ['vrare', 'Very Rare'], ['import', 'Import'], ['exotic', 'Exotic'], ['bm', 'Black Market'], ['limited', 'Limited']];
+    var itemPos = 0;
+    var hoverPinStatus = false;
+    
+    $('.tradeItem').hover(function() {
+        console.log('hello');
+        $('.tradeItemHoverWrap').remove();
+        itemPos = $(this).offset();
+        var qualityTitle = $(this).data('quality')
+        
+        var itemInfoTemplate = '<div class="tradeItemHoverWrap">' +
                                     '<div class="tradeItemHover">' +
                                         '<div class="tradeItemHoverInfoWrap">' +
                                             '<ul class="tradeItemHoverInfo">' +
                                                 '<li class="listTitle" id="itemName">Breakout</li>' +
-                                                '<li class="listDesc" id="itemRarity">Common</li>' +
+                                                '<li class="listDesc" id="itemRarity">' + quality[qualityTitle][1] + '</li>' +
                                                 '<li class="listDesc" id="itemType">Body</li>' +
                                                 '<li class="listDesc" id="itemPaint">No paint</li>' +
                                                 '<li class="listDesc" id="itemCert">Not certified</li>' +
@@ -165,17 +201,6 @@ $(window).load(function(){
                                         '</svg>' +
                                         '</div>' +
                                     '</div>';
-    
-    jQuery.fn.mouseIsOver = function() {
-        return $(this).parent().find($(this).selector + ":hover").length > 0;
-    }
-    
-    var itemPos = 0;
-    var hoverPinStatus = false;
-    
-    $('.tradeItem').hover(function() {
-        $('.tradeItemHoverWrap').remove();
-        itemPos = $(this).offset();
         $('.tradeItemHoverCont').append(itemInfoTemplate);
         $('.tradeItemHoverWrap').css({
             "top" : itemPos.top - 310 + "px",
@@ -183,7 +208,7 @@ $(window).load(function(){
             "display" : "block"
         });
     }, function () {
-        /*if (hoverPinStatus) {
+        if (hoverPinStatus) {
             if (!$('.tradeItemHoverWrap').mouseIsOver()) {
                 $('.tradeItemHoverWrap').remove();
                 hoverPinStatus = false;
@@ -191,7 +216,7 @@ $(window).load(function(){
             
         } else {
             $('.tradeItemHoverWrap').remove();
-        }*/
+        }
     });
     setInterval(function(){
         $('.tradeItemHoverWrap').hover(function(){
