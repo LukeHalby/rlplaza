@@ -76,7 +76,7 @@ $(function() {
         $("#r3c3").text(hashStringThree[2]);
         $("#r3c4").text(hashStringThree[3]);
         $("#r3c5").text(hashStringThree[4]);
-    },60)
+    },80)
     
     $(window).scroll(function(){
 		var st = $(this).scrollTop();
@@ -107,10 +107,12 @@ $(function() {
     }*/
     
     var quality = [['rare', 'Rare'], ['vrare', 'Very Rare'], ['import', 'Import'], ['exotic', 'Exotic'], ['bm', 'Black Market'], ['limited', 'Limited']];
+    var bodies = ['Animus GP', 'Breakout', 'Cyclone', 'Dominus GT'];
     
     for (i=1; i<=30; i++) {
-        var rand = Math.floor(Math.random() * 6);
-        var itemObject = '<div class="tradeItem" data-quality="' + rand + '"><img src="images/items/bodies/breakout2.png"><svg width="90" height="90" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="url(#' + quality[rand][0] + ')"/></svg><span class="tradeItemPrice">0.00</span></div>';
+        var randQuality = Math.floor(Math.random() * 6);
+        var randBody = Math.floor(Math.random() * 4);
+        var itemObject = '<div class="tradeItem" data-quality="' + randQuality + '" data-body="' + bodies[randBody] + '"><img src="images/items/bodies/' + bodies[randBody] + '.png"><svg width="90" height="90" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="url(#' + quality[randQuality][0] + ')"/></svg><span class="tradeItemPrice">0.00</span></div>';
         $('#playerInvCol').append(itemObject);
         
     }
@@ -153,12 +155,19 @@ $(window).load(function(){
             return ($(b).data('quality')) < ($(a).data('quality')) ? 1 : -1;
         }
     });
+    $('#alphPlayer').on('click', function () {
+        $("#playerInvCol .tradeItem").sort(alphSort).appendTo('#playerInvCol');
+        function alphSort(a, b) {
+            return ($(b).data('body')) < ($(a).data('body')) ? 1 : -1;
+        }
+    });
     
     jQuery.fn.mouseIsOver = function() {
         return $(this).parent().find($(this).selector + ":hover").length > 0;
     }
     
     var quality = [['rare', 'Rare'], ['vrare', 'Very Rare'], ['import', 'Import'], ['exotic', 'Exotic'], ['bm', 'Black Market'], ['limited', 'Limited']];
+    var bodies = ['Animus GP', 'Breakout', 'Cyclone', 'Dominus GT'];
     var itemPos = 0;
     var hoverPinStatus = false;
     
@@ -166,13 +175,14 @@ $(window).load(function(){
         console.log('hello');
         $('.tradeItemHoverWrap').remove();
         itemPos = $(this).offset();
-        var qualityTitle = $(this).data('quality')
+        var bodyTitle = $(this).data('body');
+        var qualityTitle = $(this).data('quality');
         
         var itemInfoTemplate = '<div class="tradeItemHoverWrap">' +
                                     '<div class="tradeItemHover">' +
                                         '<div class="tradeItemHoverInfoWrap">' +
                                             '<ul class="tradeItemHoverInfo">' +
-                                                '<li class="listTitle" id="itemName">Breakout</li>' +
+                                                '<li class="listTitle" id="itemName">' + bodyTitle + '</li>' +
                                                 '<li class="listDesc" id="itemRarity">' + quality[qualityTitle][1] + '</li>' +
                                                 '<li class="listDesc" id="itemType">Body</li>' +
                                                 '<li class="listDesc" id="itemPaint">No paint</li>' +
