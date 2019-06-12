@@ -110,9 +110,14 @@ $(function() {
     var bodies = ['Animus GP', 'Breakout', 'Cyclone', 'Dominus GT'];
     
     for (i=1; i<=30; i++) {
+        var randPrices = [];
+        for (j=1; j<=7; j++) {
+            var price = Math.floor(Math.random() * 250) / 100;
+            randPrices.push(price);
+        }
         var randQuality = Math.floor(Math.random() * 6);
         var randBody = Math.floor(Math.random() * 4);
-        var itemObject = '<div class="tradeItem" data-quality="' + randQuality + '" data-body="' + bodies[randBody] + '"><img src="images/items/bodies/' + bodies[randBody] + '.png"><svg width="90" height="90" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="url(#' + quality[randQuality][0] + ')"/></svg><span class="tradeItemPrice">0.00</span></div>';
+        var itemObject = '<div class="tradeItem" data-quality="' + randQuality + '" data-body="' + bodies[randBody] + '" data-pricehistory="[' + randPrices + ']"><img src="images/items/bodies/' + bodies[randBody] + '.png"><svg width="90" height="90" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="url(#' + quality[randQuality][0] + ')"/></svg><span class="tradeItemPrice">0.00</span></div>';
         $('#playerInvCol').append(itemObject);
         
     }
@@ -166,6 +171,10 @@ $(window).load(function(){
         return $(this).parent().find($(this).selector + ":hover").length > 0;
     }
     
+    function pricePl(z) {
+        var placement = 20 + (240 - 96 * z);
+        return placement;
+    }
     var quality = [['rare', 'Rare'], ['vrare', 'Very Rare'], ['import', 'Import'], ['exotic', 'Exotic'], ['bm', 'Black Market'], ['limited', 'Limited']];
     var bodies = ['Animus GP', 'Breakout', 'Cyclone', 'Dominus GT'];
     var itemPos = 0;
@@ -177,7 +186,8 @@ $(window).load(function(){
         itemPos = $(this).offset();
         var bodyTitle = $(this).data('body');
         var qualityTitle = $(this).data('quality');
-        
+        var priceHis = $(this).data('pricehistory');
+        console.log(priceHis);
         var itemInfoTemplate = '<div class="tradeItemHoverWrap">' +
                                     '<div class="tradeItemHover">' +
                                         '<div class="tradeItemHoverInfoWrap">' +
@@ -207,7 +217,7 @@ $(window).load(function(){
                                                     '<text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_40" y="271.426853" x="339.082212" stroke-width="0" stroke="#ffffff" fill="#ffffff">Fri</text>' +
                                                     '<text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_41" y="271.426853" x="412.412212" stroke-width="0" stroke="#ffffff" fill="#ffffff">Sat</text>' +
                                                     '<text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_42" y="271.442478" x="469.345962" stroke-width="0" stroke="#ffffff" fill="#ffffff">Sun</text></g>' +
-                                                    '<g fill="url(#lineGrad)" stroke="url(#lineGrad)"><path clip-path="url(#dotsClip)" d="M40 115 A1 0.85, 0, 0 1, 52 115 L113.33 115 A1 0.8, 0, 0 1, 125.33 115 L186.66 115 A1 0.8, 0, 0 1, 198.66 115 L260 115 A1 0.8, 0, 0 1, 272 115 L333.33 115 A1 0.8, 0, 0 1, 345.33 115 L406.66 115 A1 0.8, 0, 0 1, 418.66 115 L480 115 A1 0.8, 0, 0 1, 492 115  L492 118 A1 0.8, 0, 0 1, 480 118  L418.66 118 A1 0.8, 0, 0 1, 406.66 118 L345.33 118 A1 0.8, 0, 0 1, 333.33 118 L272 118 A1 0.8, 0, 0 1, 260 118 L198.66 118 A1 0.8, 0, 0 1, 186.66 118 L125.33 118 A1 0.8, 0, 0 1, 113.33 118 L52 118 A1 0.85, 0, 0 1, 40 118.5 L40 115"/></g>' +
+                                                    '<g fill="url(#lineGrad)" stroke="url(#lineGrad)"><path clip-path="url(#dotsClip)" d="M40 ' + pricePl(priceHis[0]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0 M113.33 ' + pricePl(priceHis[1]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0M186.66 ' + pricePl(priceHis[2]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0M260 ' + pricePl(priceHis[3]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0M333.33 ' + pricePl(priceHis[4]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0M406.66 ' + pricePl(priceHis[5]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0M480 ' + pricePl(priceHis[6]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0 "/><polyline stroke-width="3" fill="none" points="46,' + pricePl(priceHis[0]) + ' 119.33,' + pricePl(priceHis[1]) + ' 192.66,' + pricePl(priceHis[2]) + ' 266,' + pricePl(priceHis[3]) + ' 339.33,' + pricePl(priceHis[4]) + ' 412.66,' + pricePl(priceHis[5]) + ' 486,' + pricePl(priceHis[6]) + '"/>' +
                                         '</svg>' +
                                         '</div>' +
                                     '</div>';

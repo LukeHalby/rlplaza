@@ -49,19 +49,15 @@
   <text fill="#ffffff" stroke="#ffffff" stroke-width="0" x="412.412212" y="271.426853" id="svg_41" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">Sat</text>
   <text fill="#ffffff" stroke="#ffffff" stroke-width="0" x="469.345962" y="271.442478" id="svg_42" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">Sun</text>
   
-     <path clip-path="url(#dotsClip)" d="M40 115 A1 0.85, 0, 0 1, 52 115 
-              L113.33 115 A1 0.8, 0, 0 1, 125.33 115
-              L186.66 115 A1 0.8, 0, 0 1, 198.66 115
-              L260 115 A1 0.8, 0, 0 1, 272 115
-              L333.33 115 A1 0.8, 0, 0 1, 345.33 115
-              L406.66 115 A1 0.8, 0, 0 1, 418.66 115
-              L480 115 A1 0.8, 0, 0 1, 492 115 
-              L492 118 A1 0.8, 0, 0 1, 480 118 
-              L418.66 118 A1 0.8, 0, 0 1, 406.66 118
-              L345.33 118 A1 0.8, 0, 0 1, 333.33 118
-              L272 118 A1 0.8, 0, 0 1, 260 118
-              L198.66 118 A1 0.8, 0, 0 1, 186.66 118
-              L125.33 118 A1 0.8, 0, 0 1, 113.33 118
-              L52 118 A1 0.85, 0, 0 1, 40 118.5 L40 115"/>
+
+     <path clip-path="url(#dotsClip)" 
+           d="M40 ' + pricePl(priceHis[0]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0 
+              M113.33 ' + pricePl(priceHis[1]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0
+              M186.66 ' + pricePl(priceHis[2]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0
+              M260 ' + pricePl(priceHis[3]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0
+              M333.33 ' + pricePl(priceHis[4]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0
+              M406.66 ' + pricePl(priceHis[5]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0
+              M480 ' + pricePl(priceHis[6]) + ' a6,6 0 1,0 12 0 a6,6 0 1,0 -12 0 "/>
+     <polyline stroke-width="3" fill="none" points="46,' + pricePl(priceHis[0]) + ' 119.33,' + pricePl(priceHis[1]) + ' 192.66,' + pricePl(priceHis[2]) + ' 266,' + pricePl(priceHis[3]) + ' 339.33,' + pricePl(priceHis[4]) + ' 412.66,' + pricePl(priceHis[5]) + ' 486,' + pricePl(priceHis[6]) + '"/>
  </g>
 </svg>

@@ -9,14 +9,28 @@
 			0% {transform: rotate(360deg)}
 			100% {transform: rotate(0deg)}
 		}
-        @keyframes moveTheWave {
+        @keyframes moveTheWave1 {
             0% {
                 transform: translate3d(0,0,0);
-                stroke-dashoffset: 35px;
         }
             100% {
-                transform: translate3d(-320px,0,0);
-                stroke-dashoffset: -445px;
+                transform: translate3d(-200px,0,0);
+        }
+        }
+        @keyframes moveTheWave2 {
+            0% {
+                transform: translate3d(0,0,0);
+        }
+            100% {
+                transform: translate3d(240px,0,0);
+        }
+        }
+        @keyframes moveTheWave3 {
+            0% {
+                transform: translate3d(0,0,0);
+        }
+            100% {
+                transform: translate3d(-300px,0,0);
         }
         }
 		.clockwise {
@@ -56,19 +70,39 @@
 		<stop offset="80%" style="stop-color:rgb(0,149,224);stop-opacity:1" />
 		<stop offset="100%" style="stop-color:#001a44;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="15%" style="stop-color:rgb(0,149,224);stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#001a44;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="15%" style="stop-color:rgb(0,193,206);stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:rgb(0,193,206);stop-opacity:0" />
+    </linearGradient>
+    <linearGradient id="wave3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="15%" style="stop-color:rgb(0,236,188);stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:rgb(0,236,188);stop-opacity:0" />
+    </linearGradient>
     <clipPath id="clip1">
         <rect x="0" y="0" width="231" height="100" />
+    </clipPath>
+    <clipPath id="sineClip">
+        <rect x="5" y="250" width="335" height="110" />
     </clipPath>
     <filter id="arrowBlur">
         <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
     </filter>
   </defs>
 	<rect height="100%" width="100%" fill="#001a44" />
-    
-    <path d="M5 340 c 40.982928 0 39.017172 -80 80 -80 s 39.017172 80 80 80 s 39.017172 -80 80 -80 s 39.017172 80 80 80 s 39.017172 -80 80 -80 s 39.017172 80 80 80 s 39.017172 -80 80 -80 s 39.017172 80 80 80 s 39.017172 -80 80 -80" 
-          class="wave" style="animation: moveTheWave 9s linear infinite;" fill="transparent" stroke="rgb(0,149,224)" stroke-width="8" stroke-opacity="0.5" stroke-dasharray="0 50 470 50" stroke-linecap="round"/>
-    <rect x="340" y="254" width="400" height="92" fill="#001a44"/>
-    <rect x="0" y="254" width="5" height="92" fill="#001a44"/>
+    <g clip-path="url(#sineClip)">
+    <!--<path d="M5 340 c 40.982928 0 39.017172 -80 80 -80 s 39.017172 80 80 80 s 39.017172 -80 80 -80 s 39.017172 80 80 80 s 39.017172 -80 80 -80 s 39.017172 80 80 80 s 39.017172 -80 80 -80 s 39.017172 80 80 80 s 39.017172 -80 80 -80" 
+          class="wave" style="animation: moveTheWave 6s linear infinite;" fill="transparent" stroke="#005792" stroke-width="8" stroke-opacity="1" stroke-dasharray="0 50 470 50" stroke-linecap="round"/>-->
+        <path d="M-195 290 c 90.017 0 90.017172 -40 150 -40 s 90.017172 40 150 40 s 90.017172 -40 150 -40 s 90.017172 40 150 40 s 90.017172 -40 150 -40 s 90.017172 40 150 40 s 90.017172 -40 150 -40 s 90.017172 40 150 40 s 90.017172 -40 150 -40 V360 H5 Z" 
+            class="wave" style="animation: moveTheWave3 32s linear infinite;" fill="url(#wave3)" stroke="transparent" stroke-width="2" stroke-linecap="round"/>
+        <path d="M-350 290 c 70.017 0 70.017172 -30 120 -30 s 70.017172 30 120 30 s 70.017172 -30 120 -30 s 70.017172 30 120 30 s 70.017172 -30 120 -30 s 70.017172 30 120 30 s 70.017172 -30 120 -30 s 70.017172 30 120 30 s 70.017172 -30 120 -30 V360 H5 Z" 
+            class="wave" style="animation: moveTheWave2 14s linear infinite;" fill="url(#wave2)" stroke="transparent" stroke-width="2" stroke-linecap="round"/>
+        <path d="M-195 290 c 60.017 0 60.017172 -20 100 -20 s 60.017172 20 100 20 s 60.017172 -20 100 -20 s 60.017172 20 100 20 s 60.017172 -20 100 -20 s 60.017172 20 100 20 s 60.017172 -20 100 -20 s 60.017172 20 100 20 s 60.017172 -20 100 -20 V360 H5 Z" 
+            class="wave" style="animation: moveTheWave1 4s linear infinite;" fill="url(#wave1)" stroke="transparent" stroke-width="2" stroke-linecap="round"/>
+    </g>
     
 	<rect x="540" y="285" width="120" height="8" rx="4" ry="4" fill="url(#grad1)"/>
     <rect x="540" y="285" width="120" height="8" rx="4" ry="4" fill="url(#grad1)" class="logoBlur"/>
@@ -127,33 +161,5 @@
     <path d="M381.7 354.4 L 340 365 H 5" fill="transparent" stroke="white" stroke-width="1"/>
     <path d="M795.6 188.9 L 890 135 H 1020" fill="transparent" stroke="white" stroke-width="1"/>
     <path d="M795.6 411.1 L 890 465 H 1121" fill="transparent" stroke="white" stroke-width="1"/>
-    <g clip-path="url(#clip1)" transform="translate(890,355)" opacity="0.5">
-        <line stroke="#ffffff" opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" 
-              y2="41.032766" x2="49.850425" y1="7.174517" x1="-4.283403" fill="none"/>
-        <line stroke="#ffffff" opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" 
-              y2="21.347738" x2="100.244099" y1="41.229617" x1="49.259875" fill="none"/>
-        <line stroke="#ffffff" opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="21.150891" x2="99.259843" y1="1.465854" x1="-1.9212" fill="none"/>
-        <line stroke="#ffffff" opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_4" y2="68.394954" x2="117.566921" y1="21.741434" x1="100.244101" fill="none"/>
-        <line stroke="#ffffff" opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="3.828063" x2="126.818821" y1="21.54459" x1="100.244172" fill="none"/>
-        <line stroke="#ffffff" transform="rotate(2.119704484939575 60.381904602051435,85.42250061035139) " opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_6" y2="65.436791" x2="115.84309" y1="105.408212" x1="4.920718" fill="none"/>
-        <line stroke="#ffffff" opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_7" y2="68.001257" x2="116.779518" y1="40.835917" x1="49.85043" fill="none"/>
-        <line stroke="#ffffff" transform="rotate(-5.600850582122803 23.177211761474673,70.06818389892577) " opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_8" y2="96.152853" x2="-5.419727" y1="43.983514" x1="51.774153" fill="none"/>
-        <line stroke="#ffffff" opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_9" y2="-12.116811" x2="204.574749" y1="3.434362" x1="126.622038" fill="none"/>
-        <line opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_10" y2="103.040607" x2="103.590553" y1="67.607555" x1="116.976373" stroke="#ffffff" fill="none"/>
-        <line opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_11" y2="65.245352" x2="184.889722" y1="21.347738" x1="100.637799" stroke="#ffffff" fill="none"/>
-        <line stroke="#ffffff" opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_12" y2="105.599661" x2="155.165328" y1="68.001255" x1="117.370073" fill="none"/>
-        <line opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_13" y2="3.631212" x2="127.212588" y1="64.851651" x1="184.889722" stroke="#ffffff" fill="none"/>
-        <line opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_15" y2="64.654801" x2="184.889722" y1="67.410705" x1="116.582672" stroke="#ffffff" fill="none"/>
-        <line opacity="0.3" stroke="#ffffff" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_16" y2="17.213891" x2="218.747969" y1="100.481555" x1="231.34639" fill="none"/>
-        <line stroke="#ffffff" opacity="0.3" transform="rotate(-1.133334994316101 187.64562988281222,59.930393218994894) " stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_19" y2="17.556276" x2="219.880697" y1="102.304508" x1="155.410558" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="none"/>
-        <line opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_20" y2="17.607582" x2="218.747971" y1="3.237511" x1="127.803138" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#ffffff" fill="none"/>
-        <line stroke="#ffffff" opacity="0.3" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_21" y2="17.410732" x2="218.354266" y1="-5.423902" x1="223.078681" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="none"/>
-        <ellipse ry="2" rx="2" id="svg_22" cy="40.826752" cx="49.685017" stroke-width="null" stroke="#4c607b" fill="#4c607b"/>
-        <ellipse ry="2" rx="2" id="svg_23" cy="21.338573" cx="99.88184" stroke-width="null" stroke="#4c607b" fill="#4c607b"/>
-        <ellipse ry="2" rx="2" id="svg_24" cy="67.401541" cx="116.810963" stroke-width="null" stroke="#4c607b" fill="#4c607b"/>
-        <ellipse ry="2" rx="2" id="svg_25" cy="3.425198" cx="128.031429" stroke-width="null" stroke="#4c607b" fill="#4c607b"/>
-        <ellipse ry="2" rx="2" id="svg_26" cy="64.645636" cx="184.133762" stroke-width="null" stroke="#4c607b" fill="#4c607b"/>
-        <ellipse ry="2" rx="2" id="svg_27" cy="17.598417" cx="217.598316" stroke-width="null" stroke="#4c607b" fill="#4c607b"/>
-    </g>
 	
 </svg>
