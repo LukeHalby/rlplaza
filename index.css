@@ -4,7 +4,7 @@ html, body {
 	font-family: 'Titillium Web','Lato', sans-serif;
 	margin: 0;
 	padding: 0;
-	background-color: #001a44;
+	background-color: #001632;
 }
 html {
   -webkit-box-sizing: border-box;
@@ -34,7 +34,7 @@ html {
 }
 #navBar {
 	padding: 20px 0px;
-	background-color: #001a44;
+	background-color: #001632;
 	width: 100%;
 	color: white;
 	position: fixed;
@@ -202,7 +202,7 @@ h2 {
     min-width: 25px;
 }
 #sectionTwo {
-	background-color: #001a44;
+	background-color: #001632;
 	height: 800px;
 	width:100%;
 }
