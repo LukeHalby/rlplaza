@@ -104,6 +104,7 @@
     <filter id="bgCircleBlur">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
     </filter>
+      <style type="text/css">@import url('https://fonts.googleapis.com/css?family=Lato|Titillium+Web:200');</style>
   </defs>
 	<rect height="100%" width="100%" fill="#001632" />
     <!--<g clip-path="url(#sineClip)">
@@ -125,8 +126,9 @@
     
     
     <g stroke="#20a5e8">
-    <path stroke-width="2" fill="none" d="M772.53 127.47 L765.46 134.54 A234 234 0 0 1 834 292.5 L849 307.5 H930 L952 329.5 L930 307.5 H952 M1000 307.5 H1022 L1000 329.5 L1022 307.5 H1140 L1155 292.5 H1170 L1185 277.5 V15"/>
-    <path stroke-width="2" fill="none" d="M772.53 472.53 L765.46 465.46 A234 234 0 0 0 834 307.5 L849 292.5 H930 L952 270.5 L930 292.5 H952 M1000 292.5 H1022 L1000 270.5 L1022 292.5 H1140 L1155 307.5 H1170 L1185 322.5 V585"/>
+    <path stroke-width="2" fill="none" d="M772.53 127.47 L765.46 134.54 A234 234 0 0 1 834 292.5 L849 307.5 H930 l13 13 v-8 l5 -5 h5 m-10 13 v8 l5 5 h5 M1006 333.5 h5 l5 -5 v-16 l-5 -5 h-5 m10 13 l13 -13 H1140 L1155 292.5 H1170 L1185 277.5 V15"/>
+    <path stroke-width="2" fill="none" d="M772.53 472.53 L765.46 465.46 A234 234 0 0 0 834 307.5 L849 292.5 H860 l13 -13 v-8 l5 -5 h5 m-10 13 v8 l5 5 h5 M1006 292.5 h5 l5 -5 v-16 l-5 -5 h-5 m10 13 l13 13 H1140 L1155 307.5 H1170 L1185 322.5 V585"/>
+    <text font-size="22" font-family="Titillium Web" fill="url(#grad1)" x="878" y="287">100% SECURE</text>
     
     <path stroke-width="2" fill="none" d="M427.47 127.47 L434.54 134.54 A234 234 0 0 0 366 292.5 L351 307.5 H270 L248 329.5 L270 307.5 H248 M200 307.5 H178 L200 329.5 L178 307.5 H60 L45 292.5 H30 L15 277.5 V15"/>
     <path stroke-width="2" fill="none" d="M427.47 472.53 L434.54 465.46 A234 234 0 0 1 366 307.5 L351 292.5 H270 L248 270.5 L270 292.5 H248 M200 292.5 H178 L200 270.5 L178 292.5 H60 L45 307.5 H30 L15 322.5 V585"/>
