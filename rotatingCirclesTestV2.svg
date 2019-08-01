@@ -129,7 +129,7 @@
         <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
     </filter>
     <filter id="bgCircleBlur">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+        <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
     </filter>
       <style type="text/css">@import url('https://fonts.googleapis.com/css?family=Lato|Titillium+Web:200');</style>
   </defs>
@@ -167,12 +167,20 @@
     <circle cx="600" cy="300" r="230"  stroke-width="14" stroke="none" fill="url(#grad10)"/>
     <circle cx="600" cy="300" r="230"  stroke-width="24" stroke="url(#grad9)" fill="none"/>
     
-    <g fill="#0f294b" >
-    <path stroke="none" d="M10 40 V260 A30 30 0 0 0 40 290 H307 A290 290 0 0 1 600 10  H40 A30 30 0 0 0 10 40" />
-    <path stroke="none" d="M1190 40 V260 A30 30 0 0 1 1160 290 H893 A290 290 0 0 0 600 10  H1160 A30 30 0 0 1 1190 40" />
+    <g fill="#00162f" transform="translate(0,10)" filter="url(#bgCircleBlur)">
+    <path stroke="none" d="M20 50 V260 A30 30 0 0 0 50 290 H307 A290 290 0 0 1 515 20  H50 A30 30 0 0 0 20 50" />
+    <path stroke="none" d="M1180 50 V260 A30 30 0 0 1 1150 290 H893 A290 290 0 0 0 685 20  H1150 A30 30 0 0 1 1180 50" />
     
-    <path stroke="none" d="M10 560 V340 A30 30 0 0 1 40 310 H307 A290 290 0 0 0 600 590  H40 A30 30 0 0 1 10 560" />
-    <path stroke="none" d="M1190 560 V340 A30 30 0 0 0 1160 310 H893 A290 290 0 0 1 600 590  H1160 A30 30 0 0 0 1190 560" />
+    <path stroke="none" d="M20 550 V340 A30 30 0 0 1 50 310 H307 A290 290 0 0 0 515 580  H50 A30 30 0 0 1 20 550" />
+    <path stroke="none" d="M1180 550 V340 A30 30 0 0 0 1150 310 H893 A290 290 0 0 1 685 580  H1150 A30 30 0 0 0 1180 550" />
+    </g>
+    
+    <g fill="#001b3e" >
+    <path stroke="none" d="M20 50 V260 A30 30 0 0 0 50 290 H307 A290 290 0 0 1 515 20  H50 A30 30 0 0 0 20 50" />
+    <path stroke="none" d="M1180 50 V260 A30 30 0 0 1 1150 290 H893 A290 290 0 0 0 685 20  H1150 A30 30 0 0 1 1180 50" />
+    
+    <path stroke="none" d="M20 550 V340 A30 30 0 0 1 50 310 H307 A290 290 0 0 0 515 580  H50 A30 30 0 0 1 20 550" />
+    <path stroke="none" d="M1180 550 V340 A30 30 0 0 0 1150 310 H893 A290 290 0 0 1 685 580  H1150 A30 30 0 0 0 1180 550" />
     </g>
     <!--<circle stroke-width="2" stroke="white" cx="600" cy="300" r="290" />-->
     
