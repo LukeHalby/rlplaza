@@ -156,7 +156,7 @@ a:link, a:visited {
 	text-align: center;
 }
 h1 {
-	font-size: 35px;
+	font-size: 40px;
 	font-weight: 200;
 	color: rgb(0,193,206);
 	margin: 0 auto;
@@ -164,7 +164,7 @@ h1 {
 	z-index: 1;
 }
 h2 {
-	font-size: 24px;
+	font-size: 25px;
     line-height: 30px;
 	font-weight: 400;
 	color: white;
@@ -172,29 +172,29 @@ h2 {
     position: absolute;
 }
 #headSecure {
-    top: 60px;
-    right: 35px;
+    top: 65px;
+    right: 200px;
     color: rgb(0,236,188);
 }
 #headItems {
-    top: 570px;
-    right: 35px;
+    top: 370px;
+    right: 75px;
     color: red;
 }
 #headTrades {
-    top: 570px;
-    left: 35px;
+    top: 530px;
+    left: 10px;
     color: rgb(0,236,188);
 }
 #headPrices {
-    top: 60px;
-    left: 35px;
+    top: 130px;
+    left: 25px;
     color: rgb(0,236,188);
 }
 #hashAnimation {
     position: absolute;
-    left: 892px;
-    top: 140px;
+    right: 200px;
+    top: 125px;
     line-height: 28px;
     width: 130px;
 }
